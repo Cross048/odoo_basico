@@ -14,7 +14,7 @@ class informacion(models.Model):
     alto_en_cms = fields.Integer(string="Alto en centímetros:")
     longo_en_cms = fields.Integer(string="Longo en centímetros:")
     ancho_en_cms = fields.Integer(string="Ancho en centímetros:")
-    volume = fields.Float(compute="_volume", store=True, string="Volume m3")
+    volume = fields.Float(digits=(6,7),compute="_volume", store=True, string="Volume m3")
     literal = fields.Char(store=False)
     peso = fields.Float(digits=(6,2), default =2.7, string="Peso en KG.s:")
     densidade = fields.Float(compute="_densidade", store=True, string="Densidade en KG/m3:")
