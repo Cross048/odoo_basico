@@ -38,7 +38,7 @@ class informacion(models.Model):
     def _avisoAlto(self):
         for rexistro in self:
             if rexistro.alto_en_cms > 7:
-                rexistro.literal = 'O allto ten un valor posiblemente excesivo %s é maior que 7' % rexistro.alto_en_cms
+                rexistro.literal = 'O alto ten un valor posiblemente excesivo %s é maior que 7' % rexistro.alto_en_cms
             else:
                 rexistro.literal = ""
 
