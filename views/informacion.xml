@@ -79,7 +79,15 @@
                             </page>
                             <page string="Moedas">
                                 <group>
-
+                                    <group>
+                                        <field name="moeda_id"/>
+                                        <field name="moeda_en_texto"/>
+                                        <field name="creador_da_moeda"/>
+                                    </group>
+                                    <group>
+                                        <field name="moeda_euro_id" invisible="1"/>
+                                        <field name="gasto_en_euros"/>
+                                    </group>
                                 </group>
                             </page>
                             <page string="Data e Hora">
@@ -108,6 +116,7 @@
                     <field name="densidade"/>
                     <field name="autorizado"/>
                     <field name="sexo_traducido"/>
+                    <field name="moeda_id"/>
                 </tree>
             </field>
         </record>
