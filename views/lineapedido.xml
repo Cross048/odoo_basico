@@ -34,5 +34,14 @@
             </field>
         </record>
 
+        <record model="ir.ui.view" id="lineapedido_search_view">
+            <field name="name">lineapedido.search</field>
+            <field name="model">odoo_basico.lineapedido</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="descripcion"/>
+                </search>
+            </field>
+        </record>
     </data>
 </odoo>
