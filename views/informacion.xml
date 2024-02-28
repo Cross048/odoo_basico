@@ -108,68 +108,72 @@
                                         <field name="data"/>
                                         <field name="mes_castelan"/>
                                         <field name="mes_galego"/>
+                                        <field name="mes_ingles"/>
+                                        <field name="mes_frances"/>
                                     </group>
-                            </group>
-                        </page>
-                    </notebook>
-                </sheet>
-            </form>
-        </field>
-    </record>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
 
-    <record model="ir.ui.view" id="informacion_tree_view">
-        <field name="name">informacion.tree</field>
-        <field name="model">odoo_basico.informacion</field>
-        <field name="arch" type="xml">
-            <tree string="informacion tree">
-                <field name="name"/>
-                <field name="descripcion"/>
-                <field name="alto_en_cms"/>
-                <field name="longo_en_cms"/>
-                <field name="ancho_en_cms"/>
-                <field name="volume"/>
-                <field name="peso"/>
-                <field name="densidade"/>
-                <field name="autorizado"/>
-                <field name="sexo_traducido"/>
-                <field name="moeda_id"/>
-                <field name="data"/>
-                <field name="data_hora"/>
-                <field name="hora_utc"/>
-                <field name="hora_timezone_usuario"/>
-                <field name="hora_actual"/>
-                <field name="mes_castelan"/>
-                <field name="mes_galego"/>
-            </tree>
-        </field>
-    </record>
+        <record model="ir.ui.view" id="informacion_tree_view">
+            <field name="name">informacion.tree</field>
+            <field name="model">odoo_basico.informacion</field>
+            <field name="arch" type="xml">
+                <tree string="informacion tree">
+                    <field name="name"/>
+                    <field name="descripcion"/>
+                    <field name="alto_en_cms"/>
+                    <field name="longo_en_cms"/>
+                    <field name="ancho_en_cms"/>
+                    <field name="volume"/>
+                    <field name="peso"/>
+                    <field name="densidade"/>
+                    <field name="autorizado"/>
+                    <field name="sexo_traducido"/>
+                    <field name="moeda_id"/>
+                    <field name="data"/>
+                    <field name="data_hora"/>
+                    <field name="hora_utc"/>
+                    <field name="hora_timezone_usuario"/>
+                    <field name="hora_actual"/>
+                    <field name="mes_castelan"/>
+                    <field name="mes_galego"/>
+                    <field name="mes_ingles"/>
+                    <field name="mes_frances"/>
+                </tree>
+            </field>
+        </record>
 
-    <record model="ir.filters" id="filtroAutorizado">
-        <field name="name">Filtro informacion agrupado por Autorizado</field>
-        <field name="model_id">odoo_basico.informacion</field>
-        <field name="context">{'group_by': ['autorizado']}</field>
-        <field name="is_default">true</field>
-        <field name="active">true</field>
-        <field name="sort">[]</field>
-        <field name="domain">[]</field><!-- Aquí iría o filtro -->
-        <field name="user_id"></field><!-- En blanco para que esté dispoñible para todos os usuarios -->
-        <field name="action_id"
-               eval="ref('odoo_basico.informacion_list_action')"/><!-- Obtemos o id a partir do id externo-->
-    </record>
+        <record model="ir.filters" id="filtroAutorizado">
+            <field name="name">Filtro informacion agrupado por Autorizado</field>
+            <field name="model_id">odoo_basico.informacion</field>
+            <field name="context">{'group_by': ['autorizado']}</field>
+            <field name="is_default">true</field>
+            <field name="active">true</field>
+            <field name="sort">[]</field>
+            <field name="domain">[]</field><!-- Aquí iría o filtro -->
+            <field name="user_id"></field><!-- En blanco para que esté dispoñible para todos os usuarios -->
+            <field name="action_id"
+                   eval="ref('odoo_basico.informacion_list_action')"/><!-- Obtemos o id a partir do id externo-->
+        </record>
 
-    <record model="ir.filters" id="filtro2">
-        <field name="name">Filtro informacion 2</field>
-        <field name="model_id">odoo_basico.informacion</field>
-        <field name="context">{'group_by': ['autorizado']}</field>
-        <field name="is_default">false</field>
-        <field name="active">true</field>
-        <field name="sort">[]</field>
-        <field name="domain">['|','&amp;',('autorizado', '=', False),('sexo_traducido', '=', 'Muller'),('name',
-            '=','Rexistro 3' )]
-        </field><!-- Aquí iría o filtro -->
-        <field name="user_id"></field><!-- En blanco para que esté dispoñible para todos os usuarios -->
-        <field name="action_id"
-               eval="ref('odoo_basico.informacion_list_action')"/><!-- Obtemos o id a partir do id externo-->
-    </record>
-</data>
-        </odoo>
+        <record model="ir.filters" id="filtro2">
+            <field name="name">Filtro informacion 2</field>
+            <field name="model_id">odoo_basico.informacion</field>
+            <field name="context">{'group_by': ['autorizado']}</field>
+            <field name="is_default">false</field>
+            <field name="active">true</field>
+            <field name="sort">[]</field>
+            <field name="domain">['|','&amp;',('autorizado', '=', False),('sexo_traducido', '=', 'Muller'),('name',
+                '=','Rexistro 3' )]
+            </field><!-- Aquí iría o filtro -->
+            <field name="user_id"></field><!-- En blanco para que esté dispoñible para todos os usuarios -->
+            <field name="action_id"
+                   eval="ref('odoo_basico.informacion_list_action')"/><!-- Obtemos o id a partir do id externo-->
+        </record>
+    </data>
+</odoo>
