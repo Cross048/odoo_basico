@@ -7,7 +7,7 @@ class pedido(models.Model):
 
     name = fields.Char(required=True, size=20, string="Identificador de Pedido:")
     persoa_id = fields.Many2one('res.partner', ondelete='set null', domain="[('visible','=','True')]", index=True,
-                                string="Persoa")
+                                string="Persoa", store=True)
     # persoa_id = fields.Many2one('res.partner', ondelete='set null', domain="[]", index=True,
     #                             string="Persoa")
 # Os campos One2many Non se almacenan na BD
