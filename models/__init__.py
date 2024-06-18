@@ -1,3 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from . import informacion, suceso, pedido, lineapedido, persoa, accion_planificada
+from . import curso
+from . import ciclo
+from . import modulo
+from . import nota
+
+# odoo scaffold nombredelmodulo

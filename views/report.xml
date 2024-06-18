@@ -1,0 +1,24 @@
+<odoo>
+    <data>
+        <!-- Report action -->
+        <record id="action_report_nota_pdf" model="ir.actions.report">
+            <field name="name">Informe de Notas</field>
+            <field name="model">sxetap.nota</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">sxetap.nota.report</field>
+            <field name="report_file">sxetap.nota.report</field>
+            <field name="print_report_name">Notas de Alumnos</field>
+            <field name="binding_model_id" ref="model_sxetap_nota"/>
+            <field name="binding_type">report</field>
+        </record>
+
+        <!-- Report template -->
+        <record id="sxetap_nota_report" model="ir.actions.report.xml">
+            <field name="name">sxetap.nota.report</field>
+            <field name="model">sxetap.nota</field>
+            <field name="report_name">sxetap.nota.report</field>
+            <field name="file">sxetap.nota_report</field>
+            <field name="report_type">qweb-pdf</field>
+        </record>
+    </data>
+</odoo>

@@ -1,16 +1,17 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "odoo_basico",
+    'name': 'SXE2BernalMendez_Cristian',
+    'version': '1.0',
+    'category': 'Education',
 
-    'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+    'summary': 'Gestión de notas de alumnos',
+
 
     'description': """
-        Long description of module's purpose
+        Gestión de notas de alumnos
     """,
 
-    'author': "My Company",
+    'author': "Cristian Bernal",
     'website': "https://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
@@ -23,20 +24,22 @@
     'depends': ['base','account'],
 
     # always loaded
+    'name': 'SXE2Tapellido_nombre',
+    'version': '1.0',
+    'category': 'Education',
+    'summary': 'Gestión de notas de alumnos',
+    'depends': ['base'],
     'data': [
-        'views/persoa.xml',
-        'views/pedido.xml',
-        'views/lineapedido.xml',
-        'views/informacion.xml',
-        'views/suceso.xml',
-        'views/templates.xml',
-        'reports/report_header.xml',
-        'reports/report_informacion.xml',
-        'security/xestion_usuarios.xml',
-        'accions_planificadas/accion_planificada.xml',
+        'views/curso.xml',
+        'views/ciclo.xml',
+        'views/modulo.xml',
+        'views/nota.xml',
         'views/menu.xml',
-        'security/ir.model.access.csv',
+        'data/fp.modulo.csv',
+        'data/fp.nota.csv',
     ],
+    'installable': True,
+    'application': True,
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
